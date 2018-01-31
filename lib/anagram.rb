@@ -9,9 +9,7 @@ class Anagram
   def match(maybe_anagram_array)
     matches = []
     match_word_array = word.split("")
-    maybe_anagram_array.map! do |i|
-      i.split("")
-    end
+    maybe_anagram_array.map!{|i|   i.split("")}
     if 
       maybe_anagram_array.each{|loc| 
         if loc.all?{|item| loc.include?(item)}
