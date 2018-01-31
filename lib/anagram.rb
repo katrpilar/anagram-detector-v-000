@@ -9,13 +9,15 @@ class Anagram
   def match(maybe_anagram_array)
     matches = []
     match_word_array = word.split("")
-    maybe_anagram_array.map! do |i| 
+    maybe_anagram_array.map! do |i|
       i.split("")
-      maybe_anagram_array.all? do |item|
-        match_word_array.include?(item)
-          matches << i
-      end
     end
+    if 
+      maybe_anagram_array.each{|loc| 
+        if loc.all?{|item| loc.include?(item)}
+          matches << loc 
+        end
+      }
       #if the item contains all the same letters that @word does
       #then push the item to an array of matches
     
