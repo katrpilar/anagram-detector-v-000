@@ -11,7 +11,7 @@ class Anagram
     match_word_array = word.split("")
     maybe_anagram_array.map!{|i| i.split("")
       maybe_anagram_array.all?{|item| 
-        if match_word_array.include?(item)
+        match_word_array.include?(item)
           matches << i
         end
       }
