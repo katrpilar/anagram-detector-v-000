@@ -13,7 +13,7 @@ class Anagram
       #if the item contains all the same letters that @word does
       #then push the item to an array of matches
       if maybe_anagram_array.all?{|item| match_word_array.include?(item)}
-        matches << i
+        return matches << i
       end
     
     return matches
