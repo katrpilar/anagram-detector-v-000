@@ -15,8 +15,6 @@ class Anagram
           matches << i
         end
       }
-       
-      end
     }
       #if the item contains all the same letters that @word does
       #then push the item to an array of matches
