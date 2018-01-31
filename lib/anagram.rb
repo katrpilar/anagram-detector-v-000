@@ -12,7 +12,7 @@ class Anagram
     maybe_anagram_array.map!{|i| i.split("")}
       #if the item contains all the same letters that @word does
       #then push the item to an array of matches
-      if maybe_anagram_array.all?{|item| match_word_array.include?(item)} == true 
+      if maybe_anagram_array.all?{|item| match_word_array.include?(item)}
         matches << i
       end
     
